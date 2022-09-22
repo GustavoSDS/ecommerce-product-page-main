@@ -1,0 +1,62 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.modal-gallery {
+    width: 500px;
+    position: relative;
+
+    &__background {
+        @include m.modal-background;
+        // display: grid;
+        place-content: center;
+    }
+
+    &__close-container {
+        text-align: right;
+        height: 35px;
+        margin-bottom: 5px;
+    }
+
+    &__close {
+        width: 16px;
+
+        &:hover {
+            cursor: pointer;
+            content: url('../images/icon-close-orange.svg');
+        }
+    }
+
+    &__image-container {
+        background-image: url(../images/image-product-1.jpg);
+        height: 510px;
+        background-size: cover;
+        border-radius: 16px;
+        margin-bottom: 32px;
+    }
+
+    &__thumnails {
+        display: flex;
+        justify-content: space-between;
+        // padding: 0 35px;
+        width: 430px;
+        margin: auto;
+    }
+
+    &__thumnail {
+        width: 85px;
+        border-radius: 10px;
+
+        &:hover {
+            // border: 2px solid v.$Orange;
+            cursor: pointer;
+        }
+    }
+
+    &__previous {
+        @include m.image-btn(260px, -18px, true);
+    }
+
+    &__next {
+        @include m.image-btn(260px, 478px, true);
+    }
+}
