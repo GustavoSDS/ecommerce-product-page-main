@@ -26,6 +26,16 @@
     }
 }
 
+.show{
+    display: block;
+}
+
+.cart-empty{
+    text-align: center;
+    font-weight: 700;
+    margin-top: 50px;
+    color: variables.$Black-modal;
+}
 
 // Footer
 .attribution {

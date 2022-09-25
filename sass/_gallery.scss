@@ -26,10 +26,12 @@
             justify-content: space-between;
         }
     }
-    &__thumnail{
+
+    &__thumnail {
         width: 90px;
         border-radius: 16px;
-        &:hover{
+
+        &:hover {
             cursor: pointer;
             border: 2px solid v.$Orange;
             opacity: .6;
@@ -38,11 +40,15 @@
 
     @media (min-width:1115px) {
         width: 446px;
+
         &__image-container {
             background-position-y: 0;
             border-radius: 16px;
             height: 446px;
             margin-bottom: 32px;
+            &:hover{
+                cursor: pointer;
+            }
         }
     }
 }

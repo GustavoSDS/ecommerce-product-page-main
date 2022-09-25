@@ -2,13 +2,17 @@
 @use 'mixins' as m;
 
 .modal-gallery {
-    width: 500px;
+    width: 550px;
     position: relative;
-
+    
     &__background {
-        @include m.modal-background;
-        // display: grid;
-        place-content: center;
+        display: none;
+        
+        @media (min-width:1115px) {
+            @include m.modal-background;
+            // display: grid;
+            place-content: center;
+        }
     }
 
     &__close-container {
@@ -28,7 +32,7 @@
 
     &__image-container {
         background-image: url(../images/image-product-1.jpg);
-        height: 510px;
+        height: 550px;
         background-size: cover;
         border-radius: 16px;
         margin-bottom: 32px;
@@ -57,6 +61,6 @@
     }
 
     &__next {
-        @include m.image-btn(260px, 478px, true);
+        @include m.image-btn(260px, 525px, true);
     }
 }
