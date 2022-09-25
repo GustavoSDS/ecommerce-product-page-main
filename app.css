@@ -124,6 +124,11 @@
   z-index: 1;
   display: none;
 }
+@media (min-width: 1115px) {
+  .modal-navbar__background {
+    display: none;
+  }
+}
 .modal-navbar__items {
   display: flex;
   flex-direction: column;

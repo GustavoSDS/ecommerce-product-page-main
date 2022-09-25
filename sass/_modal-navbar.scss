@@ -4,6 +4,9 @@
 .modal-navbar {
     &__background {
         @include mixins.modal-background;
+        @media (min-width:1115px) {
+            display: none;
+        }
     }
 
     background-color: variables.$White;

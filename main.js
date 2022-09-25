@@ -79,7 +79,9 @@ const imagesModal = document.querySelector('.modal-gallery__background');
 const closeModalBtn = document.querySelector('.modal-gallery__close');
 
 imageContainer.addEventListener('click', () => {
-    imagesModal.style.display = 'grid';
+    if(window.innerWidth>=1115){
+        imagesModal.style.display = 'grid';
+    }
 });
 
 closeModalBtn.addEventListener('click', ()=>{
@@ -121,6 +123,21 @@ nextModalGalleryBtn.addEventListener('click', () => {
 previousModalGalleryBtn.addEventListener('click', () => {
     changePreviousImage(imageModal);
 });
+
+
+// Mostrar el navbar cuando presiono el menu de hamburguesa
+const hamburguerMenu = document.querySelector('.header__menu');
+const closeModalNavbar = document.querySelector('.modal-navbar__close-icon');
+let modalNavbar = document.querySelector('.modal-navbar__background');
+
+hamburguerMenu.addEventListener('click', ()=>{
+    modalNavbar.style.display = 'block';
+});
+closeModalNavbar.addEventListener('click', ()=>{
+    modalNavbar.style.display = 'none';
+});
+
+
 
 
 // Funciones
